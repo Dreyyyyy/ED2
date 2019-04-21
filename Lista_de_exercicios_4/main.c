@@ -67,7 +67,7 @@ int main(int argc, char const *argv[]) {
   scanf("%d", &k);
   printf("\nRetorna o endereço do ponteiro que contém o endereço da chave:\n");
   endDOend = buscaEnderecoDoPonteiro(&raizIt, k);
-  if (endDOend != NULL) {
+  if (*endDOend != NULL) {
       printf("\nChave encontrada!\n");
   }
   else {
