@@ -1,0 +1,29 @@
+//Exercícios de fixação teóricos
+
+//Árvores
+
+/*1) Defina: 
+
+a) árvore: Uma árvore é um grafo conexo e acíclico, ou seja, todos os pares da mesma possuem ligação, e sempre haverá apenas um caminho até a raiz.
+
+b) árvore binária: Uma árvore binária pode ser vazia, se não for vazia possui dois ponteiros, cada um deles apontando para uma sub árvore com a mesma estrutura deste.
+ 
+c) árvore binária de pesquisa: Uma árvore binária de pesquisa possui as mesmas características estruturais da anterior, porém com algo a mais, todos os ponteiros da sua esquerda são menores que a sua raiz, e todos os da direita são maiores que a sua raiz.
+
+d) nível de um nó em uma árvore binária: O nível de uma árvore é contado como se cada nó estivesse em linhas, por exemplo, o nó raiz é o nível 1, seus filhos serão nível 2, seus netos serão 3, e o último nível sempre será a altura da árvore.
+
+e) profundidade de um nó em uma árvore: A profundidade de um nó será a distância deste até a raiz da sua árvore.
+
+f) altura de uma árvore: A altura de uma árvore é o caminho mais longo da raiz até as folhas desta.
+
+2) Deduza a altura de uma árvore ternária cheia em função do total N de nós dessa árvore. Informe se ela é assintoticamente menor, igual ou maior que uma árvore binária cheia com a mesma quantidade de elementos. Explique sua resposta.
+
+3) Apresente uma struct em C para um nó de uma árvore binária de pesquisa. Qual a principal motivação de se ter dois ponteiros na estrutura? Argumente.
+typedef struct arv{
+    int chave;
+    struct arv *esq;
+    struct arv *dir;
+}ABP;
+
+Como temos dois ponteiros podemos organizar a árvore de maneira que seus valores menores que a raiz sempre estarão na esquerda, e os valores maiores na direita, assim facilitando na hora de implementar uma busca por exemplo(como seu próprio nome já diz).
+*/
