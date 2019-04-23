@@ -58,7 +58,7 @@ int main(int argc, char const *argv[]) {
   printf("\n=>Busca o maior valor de uma árvore binária de pesquisa(Nesse caso, ABP iterativa):\n");//Mesma coisa do procedimento acima... k
   end = buscaEnderecoDoMaior(raizIt);
   if (end != NULL) {
-      printf("\nO valor da menor chave é %d\n", end->chave);
+      printf("\nO valor da maior chave é %d\n", end->chave);
   }
   else {
     printf("\nÁrvore vazia!\n");
@@ -67,11 +67,29 @@ int main(int argc, char const *argv[]) {
   scanf("%d", &k);
   printf("\nRetorna o endereço do ponteiro que contém o endereço da chave:\n");
   endDOend = buscaEnderecoDoPonteiro(&raizIt, k);
-  if (*endDOend != NULL) {
-      printf("\nChave encontrada!\n");
+  if (endDOend != NULL) {
+      printf("\nChave %d encontrada!\n", (*endDOend)->chave);
   }
   else {
     printf("\nChave não encontrada.\n");
+  }
+  printf("\n=>(ABP iterativa)Encontra a menor chave:\n");
+  printf("\nRetorna o endereço do ponteiro que contém o endereço da chave:\n");
+  endDOend = buscaEnderecoDoPonteiroDoMenor(&raizIt);
+  if (endDOend != NULL) {
+      printf("\nO valor da menor chave é %d\n", (*endDOend)->chave);
+  }
+  else {
+    printf("\nÁrvore vazia!\n");
+  }
+  printf("\n=>(ABP iterativa)Encontra a maior chave:\n");
+  printf("\nRetorna o endereço do ponteiro que contém o endereço da chave:\n");
+  endDOend = buscaEnderecoDoPonteiroDoMaior(&raizIt);
+  if (endDOend != NULL) {
+      printf("\nO valor da maior chave é %d\n", (*endDOend)->chave);
+  }
+  else {
+    printf("\nÁrvore vazia!\n");
   }
   return 0;
 }

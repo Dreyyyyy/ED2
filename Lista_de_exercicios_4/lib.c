@@ -159,8 +159,29 @@ NoArvBinaria **buscaEnderecoDoPonteiro(NoArvBinaria **raiz, int k) {
  * O parametro de entrada raiz eh o endereco do ponteiro para o raiz
  * da arvore.
  */
-NoArvBinaria **buscaEnderecoDoPonteiroDoMenor(NoArvBinaria **raiz); /*1*/
-NoArvBinaria **buscaEnderecoDoPonteiroDoMaior(NoArvBinaria **raiz); /*2*/
+NoArvBinaria **buscaEnderecoDoPonteiroDoMenor(NoArvBinaria **raiz) {
+    if (*raiz == NULL) {//Caso a árvore for vazia, retorna nulo
+      return NULL;
+    }
+    if ((*raiz)->esq == NULL) {//Caso base: Retornará o menor nó de uma árvore(se for ABP)
+      return &(*raiz);
+    }
+    else {
+      buscaEnderecoDoPonteiroDoMenor(&(*raiz)->esq);//Caso recursivo: Percorre a árvore pela esquerda até encontrar o menor valor(se for ABP)
+    }
+} /*1*/
+
+NoArvBinaria **buscaEnderecoDoPonteiroDoMaior(NoArvBinaria **raiz) {
+  if (*raiz == NULL) {//Caso a árvore for vazia, retorna nulo
+    return NULL;
+  }
+  if ((*raiz)->dir == NULL) {//Caso base: Retornará o maior nó de uma árvore(se for ABP)
+    return &(*raiz);
+  }
+  else {
+    buscaEnderecoDoPonteiroDoMaior(&(*raiz)->dir);//Caso recursivo: Percorre a árvore pela direita até encontrar o maiorr valor(se for ABP)
+  }
+} /*2*/
 
 /*
  * Assume que *folha aponta para um no folha
