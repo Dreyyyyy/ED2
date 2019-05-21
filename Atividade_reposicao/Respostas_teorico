@@ -1,0 +1,3 @@
+Respostas:
+
+1- Uma AVL é uma árvore binária de pesquisa(porém, o contrário nem sempre ocorre) que não degenera e está sempre balanceada por conta do seu fator de balanceamento, que é a diferença entre a altura da esqueda com a da direita. Para uma árvore ser balanceada, seus nós devem ter o fator de balanceamento entre -1 e 1.
