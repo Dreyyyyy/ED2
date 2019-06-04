@@ -1,0 +1,14 @@
+Respostas:
+1)
+a)
+b)A AVL, pois levando-se em conta o pior caso das duas árvore em uma busca, a AVL, por ter fator de balanceamento e não degerar será O(log n), enquanto a ABP será O(n).
+c)
+
+2)Red-Black, pois apesar de ser mais complexa, independente da entrada, seu pior caso será melhor que o de uma ABP sem balanceamento.
+
+3)
+a)
+b)
+c)
+d)
+e)
