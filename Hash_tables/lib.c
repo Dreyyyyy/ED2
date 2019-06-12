@@ -14,8 +14,8 @@ int insere_tabela(hash tabela, int chave) {
     int hash_code = 0;
     hash_code = funcao_espalhamento(chave);
     no *novoNo = NULL;
-	novoNo = (no*)malloc(sizeof(no));
-	if (novoNo == NULL) return 0;
+    novoNo = (no*)malloc(sizeof(no));
+    if (novoNo == NULL) return 0;
     else {
 	novoNo->chave = chave;
 	novoNo->prox = tabela[hash_code];
