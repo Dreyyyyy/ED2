@@ -17,9 +17,9 @@ int insere_tabela(hash tabela, int chave) {
 	novoNo = (no*)malloc(sizeof(no));
 	if (novoNo == NULL) return 0;
     else {
-	    novoNo->chave = chave;
-	    novoNo->prox = tabela[hash_code];
-	    tabela[hash_code] = novoNo;
+	novoNo->chave = chave;
+	novoNo->prox = tabela[hash_code];
+	tabela[hash_code] = novoNo;
         return 1;
     }
 }
