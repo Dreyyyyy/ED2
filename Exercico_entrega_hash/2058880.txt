@@ -1,0 +1,8 @@
+=>Número de hash vazios na tabela:375233
+=>Números de nós da maior lista de colisões da tabela:10
+=>Número de colisões:634767
+=>Tamanho médio das listas:1.58
+
+//Não aloquei para 2*n (10^6), então usei 1010000
+//Usar gcc 2058880.c "insira_biblioteca_aqui.c" para compilar 
+
