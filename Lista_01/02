@@ -1,0 +1,4 @@
+/*2) Seja p o ponteiro para o primeiro nó de uma lista simplesmente encadeada. Considerando que uma lista podem estar vazia ou pode ter elementos,
+apresente uma definição recursiva para listas encadeadas considerando p como argumento de entrada para eventuais algoritmos que explorem sua caracterização recursiva.*/
+
+P é um ponteiro, este ponteiro pode ser nulo, se não for nulo aponta para um outro nó, e assim sucessivamente.
