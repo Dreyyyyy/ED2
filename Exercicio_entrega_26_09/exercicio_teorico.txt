@@ -1,0 +1,56 @@
+Respostas:
+
+Questão 1-a)
+    Árvore(em estrutura de dados) é uma " struct ", onde cada elemento desta possui ponteiros para outros elementos do mesmo tipo. O primeiro nó é intitulado raiz,
+os nós ao qual o raiz apontará serão seus filhos, e os nós que não possuem filhos são nós folhas.
+
+Questão 1-b)
+    Uma árvore binária(em estrutura de dados) possui a mesma estrutura da questão anterior, porém com algumas peculiaridades: Cada nó possui dois ponteiros, esq e dir, que apontam para outro elemento de estrutura igual.
+
+Questão 1-c)
+    Uma árvore binária(em estrutura de dados) possui a mesma estrutura da questão anterior, porém com algumas peculiaridades: Todos os nós a esquerda são menores que o pai deste, e todos a direita são maiores.
+
+Questão 1-d)
+    O nível de uma árvore binária(em estrutura de dados) é determinado por linhas. Imagine uma árvore representada por um grafo, onde no nível 0 estará sempre o raiz, no nível 1 seus 2 filhos, no nível 2 os filhos de seus filhos, e assim por diante(Pode se começar com 1 ao invés de 0 para representar os níveis).
+
+Questão 1-e)
+    A profundidade de uma nó em uma árvore(em estrutura de dados) é a distância deste nó até o nó raiz.
+
+Questão 1-f)
+    A altura de uma árvore(em estrutura de dados) é dada pelo nó folha com maior profundidade. 
+
+Questão 3)
+//Struct
+
+typedef struct No{
+    int chave;
+    struct No *esq;
+    struct No *dir;
+}NoABP;
+
+Os dois ponteiros na árvore servem para organizar de maneira eficiente(buscando um algoritmo log n) os nós com chave menor no lado esquerdo e os nós com chave maior no
+lado direito.
+
+Questão 4)
+//Dado a struct da questão anterior
+
+NoABP *buscaArvBinRec(NoABP *raiz, int chave) {
+  //Caso base: Se a árvore estiver vazia, retorna nulo  
+  if (raiz == NULL) {
+    return NULL;
+  }
+  else {
+    //Retorna o endereço da chave quando essa for encontrada
+    if (raiz->chave == chave) {
+      return raiz;
+    }
+    //Caso recursivo: Busca pelo lado direito da árvore caso o k buscado seja maior que a chave do raiz
+    else if (raiz->chave < chave) {
+      buscaArvBinRec(raiz->dir, chave);
+    }
+    //Caso recursivo: Busca pelo lado esquerdo da árvore caso o k buscado seja menor que a chave do raiz
+    else {
+      buscaArvBinRec(raiz->esq, chave);
+    }
+  }
+}
